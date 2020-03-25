@@ -9,6 +9,7 @@ class App{
 
   start(){
     this.getIssCoords();
+    this.issMap.onRefresh(this.getIssCoords);
   }
 
   getIssCoords(){
