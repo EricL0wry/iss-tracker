@@ -1,15 +1,10 @@
 class App{
-  constructor(mapElement){
-    this.mapElement = mapElement;
+  constructor(issMap){
+    // this.mapElement = mapElement;
+    this.issMap = issMap
     this.getIssCoords = this.getIssCoords.bind(this);
     this.handleGetCoordsError = this.handleGetCoordsError.bind(this);
     this.handleGetCoordsSuccess = this.handleGetCoordsSuccess.bind(this);
-    this.createMap = this.createMap.bind(this);
-    // this.latitude = null;
-    // this.longitude = null;
-    // this.iss = null;
-    // this.map = null;
-    // this.issMarker = null;
   }
 
   start(){
@@ -28,25 +23,12 @@ class App{
   handleGetCoordsSuccess(results){
     this.latitude = results.iss_position.latitude;
     this.longitude = results.iss_position.longitude;
-    this.createMap();
+    console.log(this.latitude, this.longitude);
+    this.issMap.createMap(this.latitude, this.longitude);
   }
 
   handleGetCoordsError(error){
     console.error(error);
   }
 
-  createMap(){
-    console.log(this.latitude, this.longitude);
-    this.iss = new google.maps.LatLng(this.latitude, this.longitude);
-
-    this.map = new google.maps.Map(this.mapElement, {
-      zoom: 4,
-      center: this.iss
-    });
-
-    this.issMarker = new google.maps.Marker({
-      position: this.iss,
-      map: this.map
-    });
-  }
 }
