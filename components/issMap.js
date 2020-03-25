@@ -9,6 +9,12 @@ class IssMap{
   }
 
   createMap(latitude, longitude) {
+    var icon = {
+      url: "./assets/space-station (1).png",
+      scaledSize: new google.maps.Size(70, 70),
+      anchor: new google.maps.Point(35, 35)
+    }
+
     this.latitude = latitude;
     this.longitude = longitude;
 
@@ -16,12 +22,14 @@ class IssMap{
 
     this.map = new google.maps.Map(this.mapElement, {
       zoom: 4,
-      center: this.iss
+      center: this.iss,
+      styles: darkMap
     });
 
     this.issMarker = new google.maps.Marker({
       position: this.iss,
-      map: this.map
+      map: this.map,
+      icon: icon
     });
   }
 }
