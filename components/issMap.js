@@ -1,11 +1,14 @@
 class IssMap{
-  constructor(mapElement){
+  constructor(mapElement, refreshButton){
     this.mapElement = mapElement;
+    this.refreshButton = refreshButton;
     this.latitude = null;
     this.longitude = null;
     this.iss = null;
     this.map = null;
     this.createMap = this.createMap.bind(this);
+    this.onRefresh = this.onRefresh.bind(this);
+    this.refreshMap = null;
   }
 
   createMap(latitude, longitude) {
@@ -31,5 +34,10 @@ class IssMap{
       map: this.map,
       icon: icon
     });
+  }
+
+  onRefresh(refreshMap){
+    this.refreshMap = refreshMap;
+    this.refreshButton.addEventListener("click", this.refreshMap);
   }
 }
