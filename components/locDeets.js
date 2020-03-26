@@ -13,7 +13,6 @@ class LocDeets{
 
   renderDeets(results, latitude, longitude){
     this.deetsElement.innerHTML = "";
-    console.log(results.status);
 
     var latLabelRow = document.createElement("tr");
     var latRow = document.createElement("tr");
@@ -83,6 +82,4 @@ class LocDeets{
     this.deetsElement.appendChild(photoLabelRow);
     this.deetsElement.appendChild(photoRow);
   }
-
-
 }

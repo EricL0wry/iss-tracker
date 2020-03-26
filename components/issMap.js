@@ -22,7 +22,6 @@ class IssMap{
     this.longitude = longitude;
 
     this.iss = new google.maps.LatLng(this.latitude, this.longitude);
-
     this.map = new google.maps.Map(this.mapElement, {
       zoom: 4,
       center: this.iss,

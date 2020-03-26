@@ -12,5 +12,4 @@ function initializeApp(){
   app = new App(issMap, locDeets);
 
   app.start();
-
 }

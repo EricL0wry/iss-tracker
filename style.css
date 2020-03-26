@@ -14,19 +14,17 @@ h5 {
   font-weight: 600;
 }
 
-img {
+table img {
   margin-top: 1rem;
 }
 
 #map {
-  height: 400px;  /* The height is 400 pixels */
-  width: 100%;  /* The width is the width of the web page */
+  height: 400px;
+  width: 100%;
 }
 
 .table-dark {
-  /* background-color: #0d3e58; */
   background-color: #3a4863;
-  /* background-color: ##354553; */
 }
 
 .btn {
