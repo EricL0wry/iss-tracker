@@ -16,7 +16,6 @@ class App{
     this.getIssCoords();
     this.issMap.onRefresh(this.getIssCoords);
     this.locDeets.handlePlaceDeets(this.getPlaceDeets);
-
   }
 
   getIssCoords(){
@@ -31,7 +30,6 @@ class App{
   handleGetCoordsSuccess(results){
     this.latitude = results.iss_position.latitude;
     this.longitude = results.iss_position.longitude;
-    console.log(this.latitude, this.longitude);
     this.issMap.createMap(this.latitude, this.longitude);
     this.getLocDeets();
   }
@@ -54,7 +52,6 @@ class App{
   }
 
   handleGetLocDeetsSuccess(results){
-    console.log(results);
     this.locDeets.renderDeets(results, this.latitude, this.longitude);
   }
 
@@ -63,11 +60,10 @@ class App{
   }
 
   getPlaceDeets(placeCode){
-    console.log(placeCode);
     var service = new google.maps.places.PlacesService(document.createElement('div'));
     var request = {
-      placeId: placeCode
-      // fields: ["photo"]
+      placeId: placeCode,
+      fields: ["photo"]
     }
     service.getDetails(request, this.handleGetPlaceDeetsResults);
   }
@@ -76,16 +72,14 @@ class App{
       console.log(results);
       console.log(status);
     var photos = results.photos;
-    console.log(photos);
 
     if(!photos) {
       return;
     }
 
-    var photoUrl = photos[randomPhotoIndex].getUrl({maxWidth: 400});
+    var randomIndex = Math.floor(Math.random() * Math.floor(photos.length));
+    var photoUrl = photos[randomIndex].getUrl({maxWidth: 400});
 
     this.locDeets.renderLocPhoto(photoUrl);
-
   }
-
 }

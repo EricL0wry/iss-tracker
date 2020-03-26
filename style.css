@@ -1,4 +1,50 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  background-image: url(./assets/sky-space-milky-way-stars-110854.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+h5 {
+  font-weight: 600;
+}
+
+table img {
+  margin-top: 1rem;
+}
+
 #map {
-  height: 600px;  /* The height is 400 pixels */
-  width: 100%;  /* The width is the width of the web page */
+  height: 400px;
+  width: 100%;
+}
+
+.table-dark {
+  background-color: #3a4863;
+}
+
+.btn {
+  background-color: #0f1626;
+}
+
+tr:last-child > td {
+  padding-bottom: 1rem;
+}
+
+tr:first-child > th {
+  padding-top: 1rem;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    img{
+      width: 90%;
+    }
 }
