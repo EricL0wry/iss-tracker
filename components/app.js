@@ -82,7 +82,8 @@ class App{
       return;
     }
 
-    var photoUrl = photos[0].getUrl({maxWidth: 400});
+    var randomIndex = Math.floor(Math.random() * Math.floor(photos.length));
+    var photoUrl = photos[randomIndex].getUrl({maxWidth: 400});
 
     this.locDeets.renderLocPhoto(photoUrl);
 

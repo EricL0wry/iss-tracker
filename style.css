@@ -8,7 +8,14 @@ header {
   background-size: cover;
   background-position: center;
   color: white;
+}
 
+h5 {
+  font-weight: 600;
+}
+
+img {
+  margin-top: 1rem;
 }
 
 #map {
@@ -19,8 +26,27 @@ header {
 .table-dark {
   /* background-color: #0d3e58; */
   background-color: #3a4863;
+  /* background-color: ##354553; */
 }
 
 .btn {
   background-color: #0f1626;
+}
+
+tr:last-child > td {
+  padding-bottom: 1rem;
+}
+
+tr:first-child > th {
+  padding-top: 1rem;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    img{
+      width: 90%;
+    }
 }

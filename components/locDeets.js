@@ -48,6 +48,7 @@ class LocDeets{
       this.getPlaceDeets(results.results[0].place_id);
     } else {
       locData.textContent = "Remote Location or Ocean, No Google Data Available";
+      locData.style.color = "red";
     }
 
     locHead.classList.add("text-center");
