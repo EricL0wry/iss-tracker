@@ -52,18 +52,23 @@ class LocDeets{
   }
 
   renderLocPhoto(photoUrl){
+    var photoLabelRow = document.createElement("tr");
     var photoRow = document.createElement("tr");
     var photoHead = document.createElement("th");
     var photoCell = document.createElement("td");
     var photo = document.createElement("img");
 
+    photoLabelRow.colSpan = "2";
+    photoLabelRow.classList.add("text-center");
+    photoRow.colSpan = "2";
     photoHead.textContent = "Location Photo";
     photo.src = photoUrl;
 
     photoCell.appendChild(photo);
-    photoRow.appendChild(photoHead);
+    photoLabelRow.appendChild(photoHead);
     photoRow.appendChild(photoCell);
 
+    this.deetsElement.appendChild(photoLabelRow);
     this.deetsElement.appendChild(photoRow);
   }
 

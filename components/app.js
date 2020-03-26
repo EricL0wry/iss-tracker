@@ -66,8 +66,8 @@ class App{
     console.log(placeCode);
     var service = new google.maps.places.PlacesService(document.createElement('div'));
     var request = {
-      placeId: placeCode
-      // fields: ["photo"]
+      placeId: placeCode,
+      fields: ["photo"]
     }
     service.getDetails(request, this.handleGetPlaceDeetsResults);
   }
@@ -82,7 +82,7 @@ class App{
       return;
     }
 
-    var photoUrl = photos[randomPhotoIndex].getUrl({maxWidth: 400});
+    var photoUrl = photos[0].getUrl({maxWidth: 400});
 
     this.locDeets.renderLocPhoto(photoUrl);
 
