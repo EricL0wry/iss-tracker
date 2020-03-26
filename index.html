@@ -19,8 +19,18 @@
     </header>
     <div class="row map-container justify-content-center">
       <div id="map" class="my-4"></div>
-      <button id="refresh-button" type="button" class="btn btn-info btn-lg my-4">REFRESH</button>
     </div>
+    <main class="row info-container justify-content-center">
+      <table class="table table-dark col-8">
+        <tbody id="details-table">
+
+        </tbody>
+      </table>
+      <div class="col-12 text-center">
+        <button id="refresh-button" type="button" class="btn btn-info btn-lg my-4">REFRESH</button>
+      </div>
+    </main>
+
 
   </div>
 
@@ -30,6 +40,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrfcCNcukCbWUX1qpoa6g42UOG7f0i550&libraries=places"></script>
   <script src="mapStyle.js"></script>
+  <script src="./components/locDeets.js"></script>
   <script src="./components/issMap.js"></script>
   <script src="./components/app.js"></script>
   <script src="main.js"></script>
