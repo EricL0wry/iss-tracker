@@ -1,0 +1,24 @@
+{
+  "name": "iss-tracker",
+  "version": "1.0.0",
+  "description": "For this Hackathon, you will be combining multiple public APIs of your choosing in order to create a web application that uses their combined data to create something new. The application is yours to design, but your idea must be approved by an instructor before you can move forward with building the application.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricL0wry/iss-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricL0wry/iss-tracker/issues"
+  },
+  "homepage": "https://github.com/EricL0wry/iss-tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  }
+}
