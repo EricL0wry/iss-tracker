@@ -44,7 +44,7 @@ class App{
       method: "GET",
       data: {
         latlng: `${this.latitude},${this.longitude}`,
-        key: "AIzaSyDrfcCNcukCbWUX1qpoa6g42UOG7f0i550"
+        key: "AIzaSyCBq8IhYKdhWxAIFx5dUzgnR72h_GeZrS0"
       },
       success: this.handleGetLocDeetsSuccess,
       error: this.handleGetLocDeetsError
