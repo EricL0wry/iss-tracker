@@ -2,20 +2,36 @@
 
 The International Space Station Tracker is a full stack JavaScript application for users who want to view the current position on the ISS on a map, along with the latitude and longitude and a photo (if available).
 
-This application uses Google's [**Maps JavaScript API**](https://developers.google.com/maps/documentation/javascript/tutorial) and [**Places Library**](https://developers.google.com/maps/documentation/javascript/places), along with the [**Open Notify ISS Locator API**](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) to display map, coordinate, and photo information.
+This application combines Google's [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial) and [Places Library API](https://developers.google.com/maps/documentation/javascript/places), along with the [Open Notify ISS Locator API](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) to display map, coordinate, description, and photo information.
 
+## Live Demo
+
+Try the application live at [https://iss-tracker.ericmichaellowry.com](https://iss-tracker.ericmichaellowry.com)
 
 ## Technologies Used
 
 - JavaScript
-- Object Oriented Programming (OOP)
+- jQuery AJAX
+- Bootstrap 4
 - Node.js
 - Express
 - Node Fetch
+- dotenv
 - NPM
+- Object Oriented Programming (OOP)
+- Google Maps JavaScript API
+- Google Maps Places API
+- Open Notify ISS Location Now API
 - HTML 5
 - CSS3
 - AWS EC2
+
+## Features
+
+- Users can view the current ISS location on a dynamic map.
+- Users can view the current ISS latitude and longitude location.
+- Users can view a location description and location photo if available.
+
 
 # C220-Hackathon-2
 
