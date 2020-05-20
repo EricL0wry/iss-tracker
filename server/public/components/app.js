@@ -20,7 +20,7 @@ class App{
 
   getIssCoords(){
     $.ajax({
-      url: "http://api.open-notify.org/iss-now.json",
+      url: "/api/iss-coords/",
       method: "GET",
       success: this.handleGetCoordsSuccess,
       error: this.handleGetCoordsError
@@ -69,8 +69,6 @@ class App{
   }
 
   handleGetPlaceDeetsResults(results, status){
-      console.log(results);
-      console.log(status);
     var photos = results.photos;
 
     if(!photos) {
