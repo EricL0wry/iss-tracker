@@ -1,8 +1,8 @@
 # International Space Station Tracker
 
-The International Space Station Tracker is a full stack JavaScript application for users who want to view the current position on the ISS on a map, along with the latitude and longitude and a photo (if available).
+The International Space Station Tracker is a full-stack mobile responsive JavaScript application for users who want to view the current position on the ISS on a map along with the latitude, longitude, and a photo (if available).
 
-This application combines Google's [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial) and [Places Library API](https://developers.google.com/maps/documentation/javascript/places), along with the [Open Notify ISS Locator API](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) to display map, coordinate, description, and photo information.
+This application combines three Google APIs ([Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/tutorial), [Geocoding API](https://developers.google.com/maps/documentation/geocoding/start), and [Places Library API](https://developers.google.com/maps/documentation/javascript/places)), along with the [Open Notify ISS Locator API](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) to display map, coordinate, description, and photo information.
 
 ## Live Demo
 
@@ -20,6 +20,7 @@ Try the application live at [https://iss-tracker.ericmichaellowry.com](https://i
 - NPM
 - Object Oriented Programming (OOP)
 - Google Maps JavaScript API
+- Google Geocoding API
 - Google Maps Places API
 - Open Notify ISS Location Now API
 - HTML 5
@@ -34,7 +35,7 @@ Try the application live at [https://iss-tracker.ericmichaellowry.com](https://i
 
 ## Preview
 
-Lorem Ipsum
+![ISS Tracker](server/public/assets/iss-tracker-demo.gif)
 
 ## Development
 
@@ -45,9 +46,11 @@ Lorem Ipsum
 
 ### API Requirements
 
-To run this app locally, you will need a Google Maps billing account and API key. Free trials are available and more informatioon can be found here:
+To run this app locally, you will need a Google Maps billing account and API key. Free trials are available and more informatioon can be found at [https://developers.google.com/maps/gmp-get-started](https://developers.google.com/maps/gmp-get-started).
 
 ### Getting Started
+
+If you would like to use this application locally, please follow the steps below:
 
 1. Clone the repository and navigate to the new local directory.
 
@@ -56,31 +59,35 @@ git clone https://github.com/EricL0wry/iss-tracker
 cd iss-tracker
 ```
 
-2. Install all dependencies with NPM.
+2. Install all dependencies with **NPM**.
 
 ```shell
 npm install
 ```
 
-3. Create a new
+3. Create a new **.env** file in the root directory of the project that will house your server port and **Google API key**.
 
+```shell
+touch .env
+```
 
-# C220-Hackathon-2
+4. In your new file, add the information below, replacing the value of ```GOOGLE_API``` with your personal api key. Save the changes to your **.env** file.
 
-For this Hackathon, you will be combining multiple public APIs of your choosing in order to create a web application that uses their combined data to create something new. The application is yours to design, but your idea must be approved by an instructor before you can move forward with building the application.
+```
+PORT=3000
+GOOGLE_API=(your api key here)
+```
 
-### Requirements
-- Combine **at least** 2 public APIs via AJAX requests and present their combined information in a web application of your design.
-- Must be issue-managed via [Meistertask](https://www.meistertask.com/) or an equivalent Kanban board.
-- Application idea **MUST** be approved by an instructor before you begin coding your project.
+5. On **line 46** of the [server/public/index.html](server/public/index.html) file, use the example below to replace the script tag with a new tag containing your **Google API key**.
 
+```html
+  <script src="https://maps.googleapis.com/maps/api/js?key=(your api key here)&libraries=places"></script>
+```
 
-### Approved API List
+6. Start your **Node** server.
 
-Found [**here**](https://docs.google.com/document/d/10CMIYVWv36gophaq_3DldBoAT4w6g4xL9xEMnEu-z5o/edit?usp=sharing)
+```shell
+npm run start
+```
 
-### ProgrammableWeb API Directory
-
-Found [**here**](https://www.programmableweb.com/apis/directory)
-
-**NOTE:** Any APIs found through this link not on the approved API list above must be approved by an instructor to be used. In order to be approved, you must be able to provide proof of a successful AJAX call in the browser **WITHOUT** using VSCode's Live Server.
+7. In your browser, navigate to [http://localhost:3000/index.html](http://localhost:3000/index.html).
