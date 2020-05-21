@@ -32,6 +32,38 @@ Try the application live at [https://iss-tracker.ericmichaellowry.com](https://i
 - Users can view the current ISS latitude and longitude location.
 - Users can view a location description and location photo if available.
 
+## Preview
+
+Lorem Ipsum
+
+## Development
+
+### System Requirements
+
+- NPM 6 or higher
+- Node.js 10 or higher
+
+### API Requirements
+
+To run this app locally, you will need a Google Maps billing account and API key. Free trials are available and more informatioon can be found here:
+
+### Getting Started
+
+1. Clone the repository and navigate to the new local directory.
+
+```shell
+git clone https://github.com/EricL0wry/iss-tracker
+cd iss-tracker
+```
+
+2. Install all dependencies with NPM.
+
+```shell
+npm install
+```
+
+3. Create a new
+
 
 # C220-Hackathon-2
 
