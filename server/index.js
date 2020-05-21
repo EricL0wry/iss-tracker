@@ -18,6 +18,17 @@ app.get("/api/iss-coords", (req, res) => {
     })
 });
 
+app.get("/api/geocode/:latlng", (req, res) => {
+  const { latlng } = req.params;
+  fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latlng}&key=${process.env.GOOGLE_API}`)
+    .then(response => response.json())
+    .then(locDeets => res.json(locDeets))
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error occurred' });
+    })
+})
+
 app.listen(process.env.PORT, () => {
   // eslint-disable-next-line no-console
   console.log('Listening on port', process.env.PORT);

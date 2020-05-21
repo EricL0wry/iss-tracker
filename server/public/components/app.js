@@ -39,13 +39,10 @@ class App{
   }
 
   getLocDeets(){
+    var latLng = `${this.latitude},${this.longitude}`;
     $.ajax({
-      url: "https://maps.googleapis.com/maps/api/geocode/json",
+      url: `/api/geocode/${latLng}`,
       method: "GET",
-      data: {
-        latlng: `${this.latitude},${this.longitude}`,
-        key: "AIzaSyCBq8IhYKdhWxAIFx5dUzgnR72h_GeZrS0"
-      },
       success: this.handleGetLocDeetsSuccess,
       error: this.handleGetLocDeetsError
     })
